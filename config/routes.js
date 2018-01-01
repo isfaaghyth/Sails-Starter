@@ -36,6 +36,16 @@ module.exports.routes = {
       view: 'homepage'
    },
 
+   'POST /users/login': {
+      controller: 'UsersController',
+      action: 'login'
+   },
+
+   'POST /users/register': {
+      controller: 'UsersController',
+      action: 'create'
+   }
+
    /***************************************************************************
    *                                                                          *
    * Custom routes here...                                                    *

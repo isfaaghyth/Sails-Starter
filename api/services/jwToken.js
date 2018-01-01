@@ -1,4 +1,4 @@
-**
+/**
  * jwToken
  *
  * @description :: JSON Webtoken Service for sails

@@ -25,11 +25,8 @@ module.exports = {
 				}
 
 				if (!valid) {
-					//return res.json(401, {err: 'Invalid email or Password'});
-					//request issue no 8
-					return res.json({status:"Invalid email or Password"});
+					return res.json(401, {status:"Invalid email or Password"});
 				} else {
-					//fi issue #7
 					user.picture = user.picture || 'holder.jpg';
 					res.json({
 						status:"success",
@@ -49,7 +46,6 @@ module.exports = {
 			if (err) {
 				return res.json(err.status, {err: err});
 			}
-			// If user created successfuly we return user and token as response
 			if (users) {
 				// NOTE: payload is { id: user.id}
 				res.json(200, {user: users, token: jwToken.issue({id: users.id})});
